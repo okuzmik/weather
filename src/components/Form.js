@@ -1,9 +1,18 @@
 import React from 'react';
 
-const Form = () =>
+const Form = props =>
 {
     return (
-        <div class="white-text">Formularz</div>
+        <form onSubmit={props.submit}>
+            <input 
+            type="text" 
+            value={props.value}
+            onChange={props.change}
+            placeholder="Enter the city"
+
+            />
+            <button>Search</button>
+        </form>
     );
 }
 

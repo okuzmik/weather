@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: url("../assets/dark.jpg");
+  background: url("../assets/dark.png"); /*from http://subtlepatterns.com*/
   min-height: 100vh;
 }
 
@@ -27,6 +27,7 @@
 .header-container
 {
   max-width: 800px;
+  padding: 15px;;
 }
 
 .App-link {

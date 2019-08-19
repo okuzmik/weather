@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Result = () => {
+const Result = props => 
+{
     return ( 
-        <div class="white-text">Miasto</div> 
+        <div className="white-text">{String(props.error)}</div> 
     );
 }
  
