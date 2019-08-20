@@ -11,7 +11,7 @@ const Form = props =>
             placeholder="Enter the city"
 
             />
-            <button>Search</button>
+            <button type="submit">Search</button>
         </form>
     );
 }

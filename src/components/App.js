@@ -28,7 +28,6 @@ class App extends Component
 
   handleCitySubmit = e => {
     e.preventDefault();
-    console.log('Oh yeah!');
     const API = `httpS://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=${ApiKey}&units=metric`;
     
     fetch(API)
@@ -51,18 +50,17 @@ class App extends Component
         sunset: data.sys.sunset,
         temp: data.main.temp,
         pressure: data.main.pressure,
-        wind: data.wind,
+        wind: data.wind.speed,
         city: this.state.value,
       }))
     })
     .catch(err => {
       console.log(err)
 
-      this.setState(state => {
-        return {
+      this.setState(prevState => ({
           err: true,
-          city: this.state.value,
-        }})
+          city: prevState.value,
+        }))
     })
   }
 
@@ -83,7 +81,7 @@ class App extends Component
               change={this.handleInputChange}
               submit={this.handleCitySubmit}
               />
-            <Result error={this.state.err}/>
+            <Result weather={this.state}/>
           </section>
         </main>
       </div>
