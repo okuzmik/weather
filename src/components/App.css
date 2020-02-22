@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background: url("../assets/dark.png"); /*from http://subtlepatterns.com*/
-  background-size: 100%;
+  background-size: 100vw;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
@@ -72,4 +72,12 @@ h3
   -webkit-box-shadow: inset 0px 0px 5px 0px rgba(255,255,255,1);
   -moz-box-shadow: inset 0px 0px 5px 0px rgba(255,255,255,1);
   box-shadow: inset 0px 0px 5px 0px rgba(255,255,255,1);
+}
+
+@media(max-width: 1131px)
+{
+  .App {
+    text-align: center;
+    background: url("../assets/dark_media.png"); /*from http://subtlepatterns.com*/
+  }
 }
